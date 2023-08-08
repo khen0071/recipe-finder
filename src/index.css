@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=REM:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "REM", sans-serif;
+  background-image: url(../public/polygon3.svg);
+  background-position: center;
+  background-size: fill;
+  background-attachment: fixed;
+}
+
+@media only screen and (max-width: 550px) {
+  body {
+    background-image: url(../public/polygon-vertical.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+}
+
+.spinner_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+@media only screen and (max-width: 500px) {
+  .spinner_container {
+    min-height: 20vh;
+  }
+}
+
+/*Main*/
+.mainContainer {
+  @apply min-h-screen p-6;
+}
+.mainContent {
+  @apply flex flex-col justify-between items-center md:space-x-6 max-w-[1300px] mx-auto py-6 md:flex-row;
+}
+
+.section1 {
+  position: fixed;
+  top: 20%;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  .section1 {
+    position: relative;
+
+    right: 0%;
+    top: 0%;
+  }
+}
+
+.section1Container {
+  @apply flex flex-col justify-center items-center;
+}
+
+.section2 {
+  @apply w-full;
+}
+
+.section2Content {
+  @apply flex flex-col items-center min-h-[80vh] text-center pt-[20px] md:pt-[0px] md:justify-center;
+}
+/*Main end*/
+
+/*Card*/
+.recipeCard {
+  @apply flex flex-col px-6 py-4  items-start text-lighterOrange bg-darkOrange hover:bg-lightOrange hover:text-black ease-in-out duration-500 hover:shadow-md rounded-lg;
+}
+.recipeCardContent {
+  @apply w-full justify-between items-start gap-2;
+}
+
+.recipeCardTitle {
+  @apply text-[20px] leading-[26px] font-bold capitalize text-center;
+}
+
+.recipeCardp {
+  @apply text-[18px] font-semibold py-2;
+}
+
+.recipeCarding {
+  @apply text-[14px] leading-6;
+}
+
+.recipeInstructions {
+  @apply leading-6;
+}
+
+/*Card End*/
+
+/*Search Component*/
+.searchContainer {
+  @apply mb-[20px] flex flex-col justify-center items-center space-y-3;
+}
+.inputSearch {
+  @apply placeholder:italic placeholder:text-black block bg-white w-full border border-darkOrange  py-2 pl-9 pr-3 shadow-sm focus:outline-none  sm:text-sm;
+}
+.searchButton {
+  @apply px-6 py-[6px]  bg-darkOrange text-white hover:bg-orange hover:text-black ease-in-out duration-500;
+}
+
+/*Search Component End*/
