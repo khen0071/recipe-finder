@@ -46,7 +46,7 @@ body {
   @apply min-h-screen p-6;
 }
 .mainContent {
-  @apply flex flex-col justify-between items-center md:space-x-6 max-w-[1300px] mx-auto py-6 md:flex-row;
+  @apply flex flex-col justify-between items-center md:space-x-6 max-w-[1440px] mx-auto py-6 md:flex-row;
 }
 
 .section1 {
